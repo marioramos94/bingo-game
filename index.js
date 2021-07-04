@@ -12,6 +12,10 @@ Bingo.setNumbers(75)
 Bingo.start()
 const players = []
 
+app.get('/', function(req, res){
+    res.sendFile(__dirname + '/index.html');
+});
+
 app.post("/join",(req, res)=>{
     let card = BingoCardGenerator()
     let cardSize = 20
